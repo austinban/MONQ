@@ -47,32 +47,8 @@ app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
-app.get('/about', function(req, res) {
-    res.render('pages/about');
-});
-
-app.get('/work', function(req, res) {
-    res.render('pages/work');
-});
-
-app.get('/contact', function(req, res) {
-    res.render('pages/contact');
-});
-
-app.get('/classnav', function(req, res) {
-    res.render('pages/classnav');
-});
-
-app.get('/venture360', function(req, res) {
-    res.render('pages/venture360');
-});
-
-app.get('/veripharm', function(req, res) {
-    res.render('pages/veripharm');
-});
-
-app.get('/blog', function(req, res) {
-    res.render('pages/blog');
+app.get('/error', function(req, res) {
+    res.render('pages/error');
 });
 
 // app.use('/', index);
