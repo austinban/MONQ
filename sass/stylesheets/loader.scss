@@ -1,0 +1,86 @@
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url("/images/aboutHeader.jpg") 50% 50% no-repeat rgb(249,249,249);
+}
+
+$ball-size: 50px; // Change size here
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+.loader {
+  background: $dusty-pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.ball{
+	display: inline-block;
+	width: $ball-size;
+	height: $ball-size;
+	border-radius: 50%;
+	z-index: 100;
+	// Animation Section
+	bottom: 0;
+	@include animation('pass 2.8s 1');
+	animation-iteration-count:infinite;
+	animation-timing-function: cubic-bezier(.8,0,.2,1);
+}
+.ball1{
+	background-color: $cream;
+}
+.ball2{
+	background-color: $story-yellow
+}
+.ball3{
+	background-color: $cream;
+}
+.ball4{
+	background-color: $story-yellow
+}
+
+$first: $ball-size / 6 ;
+$second: -$ball-size - $ball-size / 6;
+$third: $ball-size / 6 ;
+
+@include keyframes(pass) {
+   0% {
+		margin: 0 $first;
+  }
+  50% {
+		margin: 0px $second;
+	}
+  100% {
+		margin: 0 $third;
+  }
+}

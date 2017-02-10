@@ -1,0 +1,135 @@
+canvas{
+  display:block;
+  vertical-align:bottom;
+  height: 100vh;
+  min-height: 600px;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  background-color: $dusty-pink;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($dusty-pink), to($story-yellow));
+  background: -webkit-linear-gradient(top, $dusty-pink, $story-yellow);
+  background: -moz-linear-gradient(top, $dusty-pink, $story-yellow);
+  background: -ms-linear-gradient(top, $dusty-pink, $story-yellow);
+  background: -o-linear-gradient(top, $dusty-pink, $story-yellow);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.huge-wrap{
+  position: absolute;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 100vh;
+  display: table;
+	pointer-events: none;
+  -webkit-perspective: 150px; /* Chrome, Safari, Opera  */
+  perspective: 150px;
+	color: $cream;
+  margin: 0 auto;
+  text-align: center;
+  .text{
+    text-rendering: optimizeLegibility;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2rem 10%;
+    padding-top: -200px;
+  	-webkit-animation: flip 1.3s;
+  	animation-iteration-count: once;
+  	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+  }
+}
+.huge{
+  @media screen and (min-width: 1080px) {
+    font-size: 6rem;
+    line-height: 7rem;
+    letter-spacing: .1rem;
+  }
+  @media screen and (max-width: 1080px) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  @media screen and (max-height: 720px) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+}
+@keyframes flip {
+  0%{
+    opacity: 0;
+  }
+	50%{
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(-10deg);
+	}
+}
+
+.down-arrow{
+  position: relative;
+  bottom: 110px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  -webkit-perspective: 150px; /* Chrome, Safari, Opera  */
+  perspective: 150px;
+  p{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  i{
+    font-size: 1rem;
+    color: $dusty-pink;
+    background-color: $cream;
+    border-radius: 50%;
+    border: 2px solid $cream;
+    padding: 15px;
+    transition: all .2s;
+  }
+}
+.bounce {
+  display: block;
+  -webkit-animation: arrow-bounce 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes arrow-bounce {
+	0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  30%{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+  }
+  45% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+	50% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  55%{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}

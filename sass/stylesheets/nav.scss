@@ -1,0 +1,285 @@
+.nav{
+  // From: http://codepen.io/chrisdwheatley/pen/cFtzb
+  .menu {
+    font-size:2em;
+    font-family: "cooper_hewittmedium", Arial-black, Arial;
+    color: #333;
+  }
+  .menu div {
+
+    @media screen and (min-height: 600px) {
+      margin: .5em;
+    }
+    @media screen and (max-height: 600px) {
+      margin: .3em;
+    }
+  }
+  .menu .wrapper{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .menu a {
+    font-family: "cooper_hewittheavy", Arial-black, Arial;
+    text-decoration: none;
+    color: $cream;
+    text-rendering: optimizeLegibility;
+    display: inline-block;
+    -webkit-perspective: 150px; /* Chrome, Safari, Opera  */
+    perspective: 150px;
+    @media screen and (min-height: 600px) {
+      padding: .25em;
+      font-size: 2rem;
+    }
+    @media screen and (max-height: 600px) {
+      padding: 0em;
+      font-size: 1.5rem;
+    }
+  }
+  .menu a:hover {
+    -webkit-animation: tottle .2s;
+  	animation-iteration-count: once;
+  	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+  }
+
+  @keyframes tottle {
+  	0%{
+      opacity: 1;
+  	}
+    50%{
+      opacity: 1;
+      -webkit-transform: scale(1.06); /* Chrome, Safari, Opera  */
+      transform: scale(1.06);
+  	}
+    100%{
+      opacity: 1;
+  	}
+  }
+  .menu div:last-child {
+  border: 0;
+  }
+  .menu--off {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    top: 0;
+    display: table;
+    background: rgba(254,130,106,.9);
+    height: 100vh;
+    transition: all 300ms;
+    z-index: 100;
+    text-align: center;
+    overflow: hidden
+  }
+  .menu--on {
+  left: 0;
+  box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.2);
+  transition: all 300ms;
+  }
+  .material-design-hamburger button {
+  display: block;
+  border: none;
+  background: none;
+  outline: 0;
+  z-index: 10000;
+  }
+  .material-design-hamburger__icon {
+  padding: 3rem 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  }
+  .material-design-hamburger__layer {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: $cream;
+  position: relative;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  z-index: 1000;
+  }
+  .material-design-hamburger__layer:before, .material-design-hamburger__layer:after {
+  display: block;
+  width: inherit;
+  height: 5px;
+  position: absolute;
+  background: inherit;
+  left: 0;
+  content: '';
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+
+  }
+  .material-design-hamburger__layer:before {
+  bottom: 200%;
+  }
+  .material-design-hamburger__layer:after {
+  top: 200%;
+  }
+  .material-design-hamburger__icon--to-arrow {
+  animation-name: material-design-hamburger__icon--slide;
+  animation-fill-mode: forwards;
+  }
+  .material-design-hamburger__icon--to-arrow:before {
+  animation-name: material-design-hamburger__icon--slide-before;
+  animation-fill-mode: forwards;
+  }
+  .material-design-hamburger__icon--to-arrow:after {
+  animation-name: material-design-hamburger__icon--slide-after;
+  animation-fill-mode: forwards;
+  }
+  .material-design-hamburger__icon--from-arrow {
+  animation-name: material-design-hamburger__icon--slide-from;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  .material-design-hamburger__icon--from-arrow:before {
+  animation-name: material-design-hamburger__icon--slide-before-from;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  .material-design-hamburger__icon--from-arrow:after {
+  animation-name: material-design-hamburger__icon--slide-after-from;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  @keyframes material-design-hamburger__icon--slide {
+  0% {
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+  }
+  @keyframes material-design-hamburger__icon--slide-before {
+    0% {
+    }
+    100% {
+      transform: rotate(45deg);
+      margin: -6% 37%;
+      width: 75%;
+    }
+  }
+  @keyframes material-design-hamburger__icon--slide-after {
+    0% {
+    }
+    100% {
+      transform: rotate(-45deg);
+      margin: -6% 37%;
+      width: 75%;
+    }
+  }
+  @keyframes material-design-hamburger__icon--slide-from {
+    0% {
+      transform: rotate(-180deg);
+    }
+    100% {
+    }
+  }
+  @keyframes material-design-hamburger__icon--slide-before-from {
+    0% {
+      transform: rotate(45deg);
+      margin: -6% 37%;
+      width: 75%;
+    }
+    100% {
+    }
+  }
+  @keyframes material-design-hamburger__icon--slide-after-from {
+    0% {
+      transform: rotate(-45deg);
+      margin: -6% 37%;
+      width: 75%;
+    }
+    100% {
+    }
+  }
+}
+
+.absolute-nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  ul{
+    padding: 0 25%;
+    margin-top: 20px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    li{
+      text-align: center;
+      display: table-cell;
+      font-size: 1.5rem;
+      a{
+        padding: 10px;
+        color: $cream !important;
+        transition: color .5s;
+        font-family: "cooper_hewittheavy", Arial-black, Arial;
+        &:hover {
+          color: lighten($cream, 10) !important;
+        }
+      }
+      &:hover {
+        -webkit-animation: tottle .2s;
+        animation-iteration-count: once;
+        animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+      }
+    }
+  }
+
+}
+
+.fixed-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    transition: all 300ms;
+    list-style: none; /** Remove list bullets */
+    padding: 0;
+    display: block;
+    padding-left: 10px;
+    li{
+      transition: all 300ms;
+      float:left;
+      clear:left;
+      background-color: $dusty-pink;
+      border-radius: 100px;
+      border: 2px solid $cream;
+      font-size: 16px;
+      padding: 0 5px;
+      &:hover{
+        background-color: $cream;
+        a{
+          color: $dusty-pink !important;
+        }
+      }
+    }
+  }
+  button {
+    font-family: "cooper_hewittheavy", Arial-black, Arial;
+    color: $cream;
+    border: none;
+    margin: 0;
+    padding: 0.4em 0.8em;
+    font-size: 1em;
+  }
+  a {
+      display: block;
+      padding: 0.2em 0.8em;
+      text-decoration: none;
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,217 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classnav Case | Austin Ban</title>
+  <% include ../partials/head %>
+</head>
+<div class="full-wrap">
+<body class="container">
+    <main>
+      <div class="gradient-block2" style="height: 100vh; text-align: center;">
+        <div class="text-block classnav-header">
+          <div class="small-12" data-aos="flip-up" data-aos-once="true" data-aos-duration="700" >
+            <h1 class="huge" style="text-align: center;">Building ClassNav's website and&nbsp;dashboard.</h1>
+            <!-- <p>
+              Working for ClassNav has definitely been the most challenging independently led project I have
+              worked on. These projects pushed me in my interface building ability, mobile responsiveness, and
+              communication general skills, all while staying on brand.
+            </p> -->
+          </div>
+        </div>
+      </div>
+      <div class="down-arrow bounce">
+        <a href="#next"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+      </div>
+
+      <div id="next" class="index-block pink">
+        <div class="text-block gradient-block2">
+          <div class="small-12" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+            <h1>
+              Where it all started.
+            </h1>
+            <p>
+              A fellow alumni of the Belmont computer science department and myself started working together on a few small
+              projects because of our complimentary skill sets. He was just a blazing fast mind with knowledge of AWS, databases,
+              and whatever else he put his mind to. I could make things look pretty on every size of screen.
+            </p>
+            <p>
+              Playing off of each other's strong points, we started work on ClassNav's home site. This consisted of taking their
+              Squarespace site's general design and cleaning it up in a fully custom site. Built using
+              <a target="_blank" href="http://foundation.zurb.com/">Zurb Foundation</a>, the general frame of the site was done in just a few days.
+              After a bit of tweaking and accommodation of their requests, we had their site live.
+            </p>
+            <a target="_blank" href="http://classnavapp.com/" class="round-button">See ClassNav App's Site <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="index-block class0-window"></div> -->
+
+      <div class="img-wrap"><img src="/images/class-5.jpg" alt="classnav case image" class="case-image"></div>
+
+      <div class="index-block">
+        <div class="text-block">
+          <div class="small-12" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+            <h1>
+              Building the syllabus submission form.
+            </h1>
+            <p>
+              ClassNav is a syllabus and scheduling app for colleges, so one of their main functions is gathering syllabi
+              from students. To do this, we modified a
+              <a target="_blank" href="http://tympanus.net/codrops/2014/07/30/fullscreen-form-interface/">submission form from Codrops</a>
+              that takes you through the process step by step. We decided to use third party code here to save ourselves some
+              headaches, while also saving ClassNav some money on our development costs.
+            </p>
+            <p>
+              To appease my love of Easter eggs, I took the time to ensure the placeholder text accurately reflected one of
+              <a target="_blank" href="http://www.imdb.com/title/tt0128445/">Wes Anderson's greatest works.</a>
+            </p>
+            <a target="_blank" href="http://classnavapp.com/submit" class="round-button">See the Submit Form <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="index-block class1-window"></div> -->
+
+      <div class="img-wrap"><img src="/images/class-1.png" alt="classnav case image" class="case-image"></div>
+
+
+      <div class="index-block">
+        <div class="text-block">
+          <div class="small-12" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+            <h1>
+              Now for the real challenge: Creating the dashboard for data scraping syllabi.
+            </h1>
+            <p>
+              In order for ClassNav to function, they needed all of the syllabi submitted through their site to by data
+              and put into their database. To do this, my partner and I came up with the dashboard you'll see in pictures
+              below.
+            </p>
+            <h2>This project became the biggest logistical nightmare I had yet encountered. </h2>
+            <p>
+              For this to work well, it needed
+              to be fast and easy to scrape the data, while also being intuitive enough for people who had never seen it before
+              to use it. It needed to do this all while ensuring the data was being entered in the same format, even though the
+              format used in the syllabi themselves seemed simple. This project deeply solidified for me the belief that these
+              things are never as simple as they seem at first glance. There are almost always hidden complexities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="index-block class2-window"></div> -->
+
+      <div class="img-wrap"><img src="/images/class-2.png" alt="classnav case image" class="case-image"></div>
+
+      <div class="index-block">
+        <div class="text-block">
+          <div class="small-12" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+            <h1>
+              Developing for dynamic content.
+            </h1>
+            <p>
+              Having to create designs that fit different amounts of data on different sized screens is a challenge
+              that I cherish. It is the exact kind of puzzle that I adore solving. Creating this dashboard required me to
+              think of all of the edge cases of great amounts of data, or no data, and how to handle both, while ensuring
+              the user gets to what they want as fast as possible.
+            </p>
+            <h2>
+              What is pictured below is the final result for how we displayed the submitted syllabi.
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="index-block class3-window"></div> -->
+
+      <div class="img-wrap"><img src="/images/class-3.png" alt="classnav case image" class="case-image"></div>
+
+      <div class="index-block">
+        <div class="text-block">
+          <div class="small-12" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+            <h1>
+              The true crucible of the build.
+            </h1>
+            <p>
+              All of the previous work would have been for naught if the screen to actually scrape the data didn't work
+              well. The page displayed below took hours upon hours of planning, not including the actual development time.
+            </p>
+            <h2>This page had to:</h2>
+            <ul>
+              <li><i class="fa fa-check" aria-hidden="true"></i> Render all image types, from .pdf to .gif and everything in between within the right window.</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i> Allow people to work on different sections of the syllabus at the same time.</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i> Accommodate multiple sections on the syllabus.</li>
+              <li><i class="fa fa-check" aria-hidden="true"></i> Be simple enough to understand intuitively.</li>
+            </ul>
+            <p>
+              Whiteboards were filled and erased with mockups of the interface several times, until we were happy with the
+              final result.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="index-block class4-window"></div> -->
+
+      <div class="img-wrap"><img src="/images/class-4.png" alt="classnav case image" class="case-image"></div>
+
+      <div class="index-block">
+        <div class="text-block">
+          <div class="small-12">
+            <div data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+              <h1>
+                What I learned, and what I would do differently.
+              </h1>
+              <p data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+                If I had to distil the many lessons I took away from this project into just a few, they would be:
+              </p>
+            </div>
+            <div class="quote" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+              <h2 >
+                "Communication is king."
+              </h2>
+              <p>
+                Whether this is communication between your fellow developers, your employers, or your employers
+                developers, communication is the only way the project will be done accurately and on time. It amazes
+                me how easily misunderstandings find their way into the heart of a project and take hours to work
+                out, but it could all be avoided by a better communication flow.
+              </p>
+            </div>
+            <div class="quote" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+              <h2 >
+                "Test new frameworks before you use them."
+              </h2>
+              <p>
+                In this project, we used a few new frameworks, ranging from a <a href="http://bourbon.io/">SASS library</a>,
+                all the way to using <a href="https://facebook.github.io/react/">React</a> for the first time. Using all
+                of these were a good idea, but we should have tested them on a smaller scale to ensure less bugs in our
+                final project.
+              </p>
+            </div>
+            <div class="quote" data-aos="flip-up" data-aos-once="true" data-aos-duration="700">
+              <h2 >
+                "Choose who you work with carefully."
+              </h2>
+              <p>
+                I have worked on several projects before, but most have fizzled out before finishing due to the lack of
+                follow through or funding. This project showed me how powerful a well designed team can be. Everyone knew
+                their role and finished it reasonably on time. It is only because of each person's individual dedication
+                that this project was ever finished.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <% include ../partials/absolute-header %>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+</div>
+</html>

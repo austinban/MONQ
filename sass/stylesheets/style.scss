@@ -1,0 +1,27 @@
+@import 'foundation.min';
+@import 'variables';
+@import 'app';
+@import 'particles';
+@import 'nav';
+@import 'index';
+@import 'footer';
+@import 'buttons';
+@import 'loader';
+
+// Font Awesome Files
+@import "font_variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "animated";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+@import "screen-reader";
+
+// on scroll animations
+@import 'aos';
