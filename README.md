@@ -1,5 +1,5 @@
 # portfolio-site
-Austin Ban portfolio site, 2016
+MONQ UI development, 2017
 
 ## Getting Started
 

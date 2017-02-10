@@ -1,0 +1,29 @@
+@mixin gradient($top, $bottom) {
+    background: $top; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($top, $bottom); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($top, $bottom); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($top, $bottom); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($top, $bottom); /* Standard syntax */
+}
+
+@mixin gradient-cover($top, $mid, $bottom, $url) {
+  background: -moz-linear-gradient(top, $top 0%, $mid 5%, $mid 95%, $bottom 100%), url($url) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(5%, $mid), color-stop(95%, $mid), color-stop(100%, $bottom)), url($url) no-repeat;
+  background: -webkit-linear-gradient(top, $top 0%, $mid 5%, $mid 95%, $bottom 100%), url($url) no-repeat;
+  background: -o-linear-gradient(top, $top 0%, $mid 5%, $mid 95%, $bottom 100%), url($url) no-repeat;
+  background: -ms-linear-gradient(top, $top 0%, $mid 5%,$mid 95%, $bottom 100%), url($url) no-repeat;
+  background: linear-gradient(to bottom, $top 0%, $mid 5%, $mid 95%, $bottom 100%), url($url) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin gradient-mid-cover($top, $mid, $bottom, $url) {
+  background: -moz-linear-gradient(top, $top 0%, $mid 5%, $mid 50%, $bottom 100%), url($url) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(5%, $mid), color-stop(95%, $mid), color-stop(100%, $bottom)), url($url) no-repeat;
+  background: -webkit-linear-gradient(top, $top 0%, $mid 5%, $mid 50%, $bottom 100%), url($url) no-repeat;
+  background: -o-linear-gradient(top, $top 0%, $mid 5%, $mid 50%, $bottom 100%), url($url) no-repeat;
+  background: -ms-linear-gradient(top, $top 0%, $mid 5%,$mid 50%, $bottom 100%), url($url) no-repeat;
+  background: linear-gradient(to bottom, $top 0%, $mid 5%, $mid 50%, $bottom 100%), url($url) no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -2,7 +2,6 @@
   // From: http://codepen.io/chrisdwheatley/pen/cFtzb
   .menu {
     font-size:2em;
-    font-family: "cooper_hewittmedium", Arial-black, Arial;
     color: #333;
   }
   .menu div {
@@ -19,7 +18,6 @@
     vertical-align: middle;
   }
   .menu a {
-    font-family: "cooper_hewittheavy", Arial-black, Arial;
     text-decoration: none;
     color: $cream;
     text-rendering: optimizeLegibility;
@@ -211,7 +209,6 @@
         padding: 10px;
         color: $cream !important;
         transition: color .5s;
-        font-family: "cooper_hewittheavy", Arial-black, Arial;
         &:hover {
           color: lighten($cream, 10) !important;
         }
@@ -265,7 +262,6 @@
     }
   }
   button {
-    font-family: "cooper_hewittheavy", Arial-black, Arial;
     color: $cream;
     border: none;
     margin: 0;

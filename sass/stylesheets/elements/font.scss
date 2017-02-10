@@ -1,0 +1,111 @@
+body,a,h1,h2,h3,h4,h5,h6,li,ul,ol,label,input,select,span {
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1{
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility;
+  color: $cream;
+  @media screen and (min-width: 1080px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 1080px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-height: 600px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
+}
+
+h2{
+  @media screen and (min-width: 1080px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 1080px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-height: 600px) {
+    font-size: 1.3rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1.3rem;
+  }
+}
+
+h3{
+  font-size: .8em;
+  color: $dark-gray;
+}
+
+p{
+  @media screen and (min-width: 1080px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 1080px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-height: 600px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
+  font-family: 'Source Sans Pro', Arial;
+  font-weight: 400;
+  color: $cream;
+}
+a{
+  color: $cream;
+  display: inline-block;
+  font-weight: 600;
+  &:hover {
+    -webkit-animation: tottle .2s;
+    animation-iteration-count: once;
+    animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+    color: inherit;
+    i{
+      color: $story-yellow;
+    }
+  }
+  &:active{
+    color: $cream;
+  }
+  &:visited {
+    color: $cream;
+  }
+}
+ul{
+  list-style: none;
+  margin-left: 0;
+  li{
+    font-size: 1.2rem;
+    font-family: 'Source Sans Pro', Arial;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+    a{
+      color: $cream;
+      display: inline-block;
+      transition: all .2s;
+      i{
+        transition: all .2s;
+      }
+      &:hover{
+        color: white;
+        -webkit-animation: tottle .2s;
+      	animation-iteration-count: once;
+      	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+        i{
+          color: $dusty-pink;
+        }
+      }
+    }
+  }
+}

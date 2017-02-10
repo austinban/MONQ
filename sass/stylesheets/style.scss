@@ -1,27 +1,39 @@
-@import 'foundation.min';
-@import 'variables';
-@import 'app';
-@import 'particles';
-@import 'nav';
-@import 'index';
-@import 'footer';
-@import 'buttons';
-@import 'loader';
+// SETTINGS
+@import 'settings/variables';
+@import 'settings/mat-colors';
 
-// Font Awesome Files
-@import "font_variables";
-@import "mixins";
-@import "path";
-@import "core";
-@import "larger";
-@import "fixed-width";
-@import "list";
-@import "bordered-pulled";
-@import "animated";
-@import "rotated-flipped";
-@import "stacked";
-@import "icons";
-@import "screen-reader";
+// TOOLS
+@import 'tools/gradients';
+@import 'tools/animations';
+
+// GENERIC
+@import 'generic/foundation.min';
+@import 'generic/particles';
+@import 'generic/aos';
+@import "generic/font_variables"; // Font Awesome Files
+@import "generic/mixins"; // Font Awesome Files
+@import "generic/path"; // Font Awesome Files
+@import "generic/core"; // Font Awesome Files
+@import "generic/larger"; // Font Awesome Files
+@import "generic/fixed-width"; // Font Awesome Files
+@import "generic/list"; // Font Awesome Files
+@import "generic/bordered-pulled"; // Font Awesome Files
+@import "generic/animated"; // Font Awesome Files
+@import "generic/rotated-flipped"; // Font Awesome Files
+@import "generic/stacked"; // Font Awesome Files
+@import "generic/icons"; // Font Awesome Files
+@import "generic/screen-reader"; // Font Awesome Files
+
+
+// ELEMENTS
+@import 'elements/font';
+
+// OBJECTS
+@import 'objects/buttons';
+@import 'objects/nav';
+
+// COMPONENTS
+
+// TRUMPS
 
 // on scroll animations
-@import 'aos';
