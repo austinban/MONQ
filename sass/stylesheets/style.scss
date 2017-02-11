@@ -56,6 +56,7 @@
 // implemented using classes.
 // ELEMENTS
 @import 'elements/font';
+@import 'elements/base';
 
 
 // Users of OOCSS will be familiar with the concept of objects. This is the first layer
@@ -65,8 +66,8 @@
 // This layer affects less of the DOM than the last layer, has a higher specificity, and is
 // slightly more explicit in that we are now targeting sections of the DOM with
 // OBJECTS
+@import 'objects/body';
 @import 'objects/buttons';
-@import 'objects/nav';
 
 
 // The Components layer is where we begin to style recognisable pieces of UI. We’re still
@@ -76,7 +77,8 @@
 // this layer. This is where the majority of your work will happen after initial project
 // set-up. Adding new components and features usually makes up the vast majority of development.
 // COMPONENTS
-
+@import 'components/pickers';
+@import 'components/orb';
 
 // This layer beats – or ‘trumps’ – all other layers, and has the power to override
 // anything at all that has gone before it. It is inelegant and heavyhanded, and contains
