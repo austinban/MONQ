@@ -1,10 +1,21 @@
 .orb-wrapper{
   text-align: center;
+  cursor: pointer;
+  padding: 10px 10px 0 10px !important;
+  &:hover{
+    .orb{
+    }
+  }
   .orb{
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     display: inline-block;
     border-radius: 400px;
-    background-color: yellow;
+    transition: all .2s;
+    &:hover{
+      @include animation('tottle .2s');
+    	animation-iteration-count: once;
+    	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+    }
   }
 }

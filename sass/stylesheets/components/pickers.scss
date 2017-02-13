@@ -2,12 +2,16 @@
   height: 100vh;
   overflow-y: scroll;
   background-color: white;
+  h2{
+    padding: 20px;
+  }
 }
 
 .picker-display{
   height: 100vh;
+  color: white;
   overflow-y: scroll;
-  background-color: blue;
+  @include gradient(#212121, #212121);
   display: flex;
   justify-content: center;
   align-items: center;

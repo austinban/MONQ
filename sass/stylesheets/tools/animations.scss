@@ -44,3 +44,17 @@
 // 		box-shadow: 12px 12px 15px darken($powder, 15);
 //   }
 // }
+
+@include keyframes(tottle) {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: scale(1.06); /* Chrome, Safari, Opera  */
+    transform: scale(1.06);
+  }
+  100%{
+    opacity: 1;
+  }
+}

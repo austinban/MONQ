@@ -1601,6 +1601,61 @@
 .transparent-text {
   color: transparent !important; }
 
+@-webkit-keyframes tottle {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.06);
+    /* Chrome, Safari, Opera  */
+    transform: scale(1.06); }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes tottle {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.06);
+    /* Chrome, Safari, Opera  */
+    transform: scale(1.06); }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes tottle {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.06);
+    /* Chrome, Safari, Opera  */
+    transform: scale(1.06); }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes tottle {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.06);
+    /* Chrome, Safari, Opera  */
+    transform: scale(1.06); }
+  100% {
+    opacity: 1; } }
+
+@keyframes tottle {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.06);
+    /* Chrome, Safari, Opera  */
+    transform: scale(1.06); }
+  100% {
+    opacity: 1; } }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -7081,7 +7136,9 @@ body, a, h1, h2, h3, h4, h5, h6, li, ul, ol, label, input, select, span {
   -moz-osx-font-smoothing: grayscale; }
 
 h2 {
-  display: block; }
+  display: block;
+  font-weight: 300;
+  font-size: 2rem; }
 
 h4 {
   font-size: .8rem; }
@@ -7128,24 +7185,245 @@ body {
 button:focus {
   outline: none; }
 
+.nav .menu {
+  font-size: 2em;
+  color: #333; }
+
+.nav img {
+  width: 12rem; }
+
+@media screen and (min-height: 600px) {
+  .nav .menu div {
+    margin: .5em; } }
+
+@media screen and (max-height: 600px) {
+  .nav .menu div {
+    margin: .3em; } }
+
+.nav .menu .wrapper {
+  display: table-cell;
+  vertical-align: middle; }
+
+.nav .menu a {
+  text-decoration: none;
+  color: black;
+  text-rendering: optimizeLegibility;
+  display: inline-block;
+  -webkit-perspective: 150px;
+  /* Chrome, Safari, Opera  */
+  perspective: 150px; }
+  @media screen and (min-height: 600px) {
+    .nav .menu a {
+      padding: .25em;
+      font-size: 2rem; } }
+  @media screen and (max-height: 600px) {
+    .nav .menu a {
+      padding: 0em;
+      font-size: 1.5rem; } }
+
+.nav .menu a:hover {
+  -webkit-animation: tottle .2s;
+  animation-iteration-count: once;
+  animation-timing-function: cubic-bezier(0.34, 0.01, 0.18, 1.35); }
+
+.nav .menu div:last-child {
+  border: 0; }
+
+.nav .menu--off {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  top: 0;
+  display: table;
+  background: #80cbc4;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#80cbc4, #26a69a);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#80cbc4, #26a69a);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#80cbc4, #26a69a);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#80cbc4, #26a69a);
+  /* Standard syntax */
+  height: 100vh;
+  transition: all 300ms;
+  z-index: 100;
+  text-align: center;
+  overflow: hidden; }
+
+.nav .menu--on {
+  left: 0;
+  transition: all 300ms; }
+
+.nav .material-design-hamburger button {
+  display: block;
+  border: none;
+  background: none;
+  outline: 0;
+  z-index: 10000; }
+
+.nav .material-design-hamburger__icon {
+  padding: 3rem 1rem;
+  cursor: pointer;
+  z-index: 1000; }
+
+.nav .material-design-hamburger__layer {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: black;
+  border-radius: 3px;
+  position: relative;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  z-index: 1000; }
+
+.nav .material-design-hamburger__layer:before, .nav .material-design-hamburger__layer:after {
+  display: block;
+  width: inherit;
+  height: 5px;
+  position: absolute;
+  background: inherit;
+  border-radius: 3px;
+  left: 0;
+  content: '';
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out; }
+
+.nav .material-design-hamburger__layer:before {
+  bottom: 200%; }
+
+.nav .material-design-hamburger__layer:after {
+  top: 200%; }
+
+.nav .material-design-hamburger__icon--to-arrow {
+  animation-name: material-design-hamburger__icon--slide;
+  animation-fill-mode: forwards; }
+
+.nav .material-design-hamburger__icon--to-arrow:before {
+  animation-name: material-design-hamburger__icon--slide-before;
+  animation-fill-mode: forwards; }
+
+.nav .material-design-hamburger__icon--to-arrow:after {
+  animation-name: material-design-hamburger__icon--slide-after;
+  animation-fill-mode: forwards; }
+
+.nav .material-design-hamburger__icon--from-arrow {
+  animation-name: material-design-hamburger__icon--slide-from; }
+
+.nav .material-design-hamburger__icon--from-arrow:before {
+  animation-name: material-design-hamburger__icon--slide-before-from; }
+
+.nav .material-design-hamburger__icon--from-arrow:after {
+  animation-name: material-design-hamburger__icon--slide-after-from; }
+
+@keyframes material-design-hamburger__icon--slide {
+  0% { }
+  100% {
+    transform: rotate(180deg); } }
+
+@keyframes material-design-hamburger__icon--slide-before {
+  0% { }
+  100% {
+    transform: rotate(45deg);
+    margin: -6% 37%;
+    width: 75%; } }
+
+@keyframes material-design-hamburger__icon--slide-after {
+  0% { }
+  100% {
+    transform: rotate(-45deg);
+    margin: -6% 37%;
+    width: 75%; } }
+
+@keyframes material-design-hamburger__icon--slide-from {
+  0% {
+    transform: rotate(-180deg); }
+  100% { } }
+
+@keyframes material-design-hamburger__icon--slide-before-from {
+  0% {
+    transform: rotate(45deg);
+    margin: -6% 37%;
+    width: 75%; }
+  100% { } }
+
+@keyframes material-design-hamburger__icon--slide-after-from {
+  0% {
+    transform: rotate(-45deg);
+    margin: -6% 37%;
+    width: 75%; }
+  100% { } }
+
 .picker-nav {
   height: 100vh;
   overflow-y: scroll;
   background-color: white; }
+  .picker-nav h2 {
+    padding: 20px; }
 
 .picker-display {
   height: 100vh;
+  color: white;
   overflow-y: scroll;
-  background-color: blue;
+  background: #212121;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#212121, #212121);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#212121, #212121);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#212121, #212121);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#212121, #212121);
+  /* Standard syntax */
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .orb-wrapper {
-  text-align: center; }
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 10px 0 10px !important; }
   .orb-wrapper .orb {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     display: inline-block;
     border-radius: 400px;
-    background-color: yellow; }
+    transition: all .2s; }
+    .orb-wrapper .orb:hover {
+      -webkit-animation: tottle .2s;
+      -moz-animation: tottle .2s;
+      -ms-animation: tottle .2s;
+      -o-animation: tottle .2s;
+      animation: tottle .2s;
+      animation-iteration-count: once;
+      animation-timing-function: cubic-bezier(0.34, 0.01, 0.18, 1.35); }
+
+.display-orb {
+  width: 18rem;
+  height: 18rem;
+  display: inline-block;
+  border-radius: 400px;
+  transition: all .2s;
+  mix-blend-mode: screen;
+  background: #f06292;
+  /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(at 85% 15%, #f06292, #880e4f);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(at 85% 15%, #f06292, #880e4f);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(at 85% 15%, #f06292, #880e4f);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(at 85% 15%, #f06292, #880e4f);
+  /* Standard syntax */ }
+  .display-orb:hover {
+    -webkit-animation: tottle 1.2s;
+    -moz-animation: tottle 1.2s;
+    -ms-animation: tottle 1.2s;
+    -o-animation: tottle 1.2s;
+    animation: tottle 1.2s;
+    animation-iteration-count: once;
+    animation-timing-function: cubic-bezier(0.34, 0.01, 0.18, 1.35); }
+
+.columns {
+  padding: 0; }

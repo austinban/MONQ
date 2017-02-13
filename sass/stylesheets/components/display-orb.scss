@@ -1,0 +1,14 @@
+.display-orb{
+  width: 18rem;
+  height: 18rem;
+  display: inline-block;
+  border-radius: 400px;
+  transition: all .2s;
+  mix-blend-mode: screen;
+  @include gradient-radial(#f06292, #880e4f);
+  &:hover{
+    @include animation('tottle 1.2s');
+    animation-iteration-count: once;
+    animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+  }
+}
