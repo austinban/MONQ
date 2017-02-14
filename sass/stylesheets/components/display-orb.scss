@@ -1,14 +1,25 @@
 .display-orb{
-  width: 18rem;
-  height: 18rem;
   display: inline-block;
   border-radius: 400px;
   transition: all .2s;
   mix-blend-mode: screen;
-  @include gradient-radial(#f06292, #880e4f);
-  &:hover{
-    @include animation('tottle 1.2s');
-    animation-iteration-count: once;
-    animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+  margin-right: -8%;
+  @include animation('tottle 2.2s');
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+  &:nth-child(1){
+    @include gradient-radial(#f06292, #880e4f);
+    width: 12rem;
+    height: 12rem;
+  }
+  &:nth-child(2){
+    @include gradient-radial(#f0f4c3, #afb42b);
+    width: 18rem;
+    height: 18rem;
+  }
+  &:nth-child(3){
+    @include gradient-radial(#bbdefb, #1976d2);
+    width: 15rem;
+    height: 15rem;
   }
 }

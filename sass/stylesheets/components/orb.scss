@@ -1,21 +1,29 @@
 .orb-wrapper{
   text-align: center;
   cursor: pointer;
-  padding: 10px 10px 0 10px !important;
-  &:hover{
-    .orb{
-    }
-  }
-  .orb{
-    width: 4rem;
-    height: 4rem;
-    display: inline-block;
-    border-radius: 400px;
-    transition: all .2s;
+  padding: 10px !important;
+  .inner-orb{
+    border: 1px solid $mid-blue;
+    border-radius: 12px;
+    padding: 10px 10px 5px 10px;
+    background-color: white;
+    transition: all .3s;
     &:hover{
-      @include animation('tottle .2s');
-    	animation-iteration-count: once;
-    	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+      background-color: $mid-blue;
+      color: white;
+      .orb{
+        border: 2px solid white;
+        @include animation('tottle .4s');
+      	animation-iteration-count: once;
+      	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+      }
+    }
+    .orb{
+      width: 4rem;
+      height: 4rem;
+      display: inline-block;
+      border-radius: 400px;
     }
   }
+
 }

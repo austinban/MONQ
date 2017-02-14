@@ -1,5 +1,6 @@
 .nav{
   // From: http://codepen.io/chrisdwheatley/pen/cFtzb
+  display: inline-block;
   .menu {
     font-size:2em;
     color: #333;
@@ -51,7 +52,7 @@
     width: 100%;
     top: 0;
     display: table;
-    @include gradient(#80cbc4, #26a69a);
+    background-color: $mid-blue;
     height: 100vh;
     transition: all 300ms;
     z-index: 100;
@@ -175,4 +176,10 @@
     100% {
     }
   }
+}
+
+#logo{
+  position: relative;
+  width: 200px;
+  margin-left: 30px;
 }
