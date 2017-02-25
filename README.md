@@ -41,7 +41,13 @@ The output should look similar to:
 v6.2.1
 ```
 
-Once node is installed, all you need to do to get the app running is run the following command from the home directory:
+Once node is installed, all you need to do to get the app running is run the following two commands command from the home directory:
+
+```
+npm install
+```
+
+and
 
 ```
 npm start
