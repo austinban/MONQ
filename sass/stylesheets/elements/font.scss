@@ -4,30 +4,18 @@ body,a,h1,h2,h3,h4,h5,h6,li,ul,ol,label,input,select,span {
   -moz-osx-font-smoothing: grayscale;
 }
 h1{
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: 300;
 }
 h2{
   display: block;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 h4{
   font-size: .8rem;
 }
 
-.lined {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-.lined:after {
-    position: absolute;
-    top: 38%;
-    left: 35%;
-    overflow: hidden;
-    width: calc(65% - 10px);
-    height: 1px;
-    content: '\a0';
-    background-color: black;
+.centered{
+  text-align: center;
 }

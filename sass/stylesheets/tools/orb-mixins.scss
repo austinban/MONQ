@@ -1,0 +1,29 @@
+@include keyframes(swell) {
+  0%{
+    -webkit-transform: scale(.0); /* Chrome, Safari, Opera  */
+    transform: scale(.0);
+  }
+  90%{
+    -webkit-transform: scale(1.06); /* Chrome, Safari, Opera  */
+    transform: scale(1.06);
+  }
+  100%{
+    -webkit-transform: scale(1); /* Chrome, Safari, Opera  */
+    transform: scale(1);
+  }
+}
+
+@mixin orb-mixin($color1, $color2, $size, $time) {
+  display: inline-block;
+  border-radius: 600px;
+  mix-blend-mode: screen;
+  margin-right: -4%;
+  margin-top: -4%;
+  transition: all .8s;
+  @include gradient-radial($color1, $color2);
+  width: $size;
+  height: $size;
+  @include animation('orb-tottle' $time);
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.5,.0,.5,1);
+}

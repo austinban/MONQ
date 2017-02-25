@@ -1,31 +1,27 @@
 <meta charset="UTF-8">
-
-<!--
-──────▄▀▄─────▄▀▄
-─────▄█░░▀▀▀▀▀░░█▄
-─▄▄──█░░░░░░░░░░░█──▄▄
-█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█ Hi there. Hope you like the site. -Austin Ban
--->
-
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<meta name="description" content="I am a Nashville based web developer, web designer, and storyteller. I build beautiful websites to help others tell their story.">
 <link rel="stylesheet", href='/stylesheets/style.css'>
 <link rel="stylesheet", href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/javascripts/aos.js"></script>
 <link rel="icon" type="image/png" href="/images/favicon.png">
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  $( function() {
+    $( ".slider" ).slider({
+      value: 100,
+      slide: handleSliderChange
+    });
+  });
 
-  ga('create', 'UA-89118704-1', 'auto');
-  ga('send', 'pageview');
 
-</script>
-<script>
-  $(window).on('load', function () {
-    $(".loader").fadeOut("slow");
- });
+  function handleSliderChange(event, slider){
+    var capture = $(this).attr('id');
+    console.log(capture);
+    $(capture).css('opacity', slider.value / 100);
+    $(capture).find('p').text("Level: " + slider.value + '%');
+    $(this).parent().find('p').text("Level: " + slider.value + '%');
+  }
 </script>

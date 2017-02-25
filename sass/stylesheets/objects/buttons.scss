@@ -1,26 +1,47 @@
 .round-button{
   display: inline-block;
-  color: $cream;
-  border: 2px solid $cream;
+  color: $mid-blue;
+  border: 2px solid $mid-blue;
   padding: 10px 20px;
-  border-radius: 100px;
   transition: all .2s;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  margin: 10px 10px 10px 0;
   i{
     width: 18px;
   }
   &:hover{
     transition: all .2s;
-    background: $cream;
-    color: $dusty-pink;
-    -webkit-animation: tottle .2s;
-  	animation-iteration-count: once;
-  	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+    background: $mid-blue;
+    color: black;
     i{
-      color: $dusty-pink;
+      color: black;
+    }
+  }
+}
+
+.light-button{
+  display: inline-block;
+  color: white;
+  border: 2px solid white;
+  border-radius: 200px;
+  padding: 10px 30px;
+  transition: all .2s;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 10px;
+  i{
+    height: 1.25rem;
+    padding-left: 5px;
+  }
+  &:hover{
+    transition: all .2s;
+    background: white;
+    color: #880e4f;
+    @include animation('tottle .4s');
+    i{
+      color: #880e4f;
     }
   }
 }

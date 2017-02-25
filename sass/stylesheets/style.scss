@@ -18,6 +18,7 @@
 // TOOLS
 @import 'tools/gradients';
 @import 'tools/animations';
+@import 'tools/orb-mixins';
 
 
 // The Generic layer is the first one that actually produces any CSS. It houses very
@@ -78,10 +79,13 @@
 // set-up. Adding new components and features usually makes up the vast majority of development.
 // COMPONENTS
 @import 'components/nav';
-@import 'components/pickers';
+@import 'components/pickers-display';
+@import 'components/pickers-wave-display';
+@import 'components/pickers-nav';
 @import 'components/orb';
 @import 'components/display-orb';
 @import 'components/search';
+@import 'components/tooltip';
 
 // This layer beats – or ‘trumps’ – all other layers, and has the power to override
 // anything at all that has gone before it. It is inelegant and heavyhanded, and contains

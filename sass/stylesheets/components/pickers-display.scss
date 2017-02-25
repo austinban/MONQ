@@ -1,0 +1,88 @@
+.picker-display-wrapper{
+  transition: all .8s;
+  height: 100vh;
+  color: white;
+  .picker-display{
+    height: calc(100vh - 194px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darken(#212121, 15);
+  }
+  .checkout{
+    height: 48px;
+    display: inline-block;
+    width: 100%;
+    background-color: darken(#212121, 15);
+    .round-button{
+      padding: 10px 0px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .ingredient{
+    padding: 0px 20px 20px 20px;
+    display: block;
+    background-color: darken(#212121, 15);
+    h2{
+      display: inline-block;
+      // float: left;
+      font-size: 1.5rem;
+    }
+    p{
+      padding-top: .5rem;
+      padding-left: 1rem;
+      display: inline-block;
+    }
+  }
+}
+.toggle-button{
+  text-align: center;
+  background-color: darken(#212121, 15);
+}
+.refine-button{
+  visibility: hidden;
+  padding: 15px 60px;
+  border-radius: 100px;
+  background-color: rgba(255,255,255,.7);
+  font-size: 1.25rem;
+  &:hover{
+    @include animation('tottle .4s');
+    background-color: rgba(255,255,255,1);
+    color: $mid-blue;
+    i{
+      color: $mid-blue;
+    }
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .toggle-button{
+    text-align: center;
+    padding-bottom: 28px;
+    background-color: rgba(0,0,0,0);
+    .refine-button{
+      visibility: visible;;
+      text-align: center;
+    }
+  }
+  .picker-display-below{
+    position: fixed;
+    top: calc(100vh - 72px);
+    left: 0;
+  }
+  .picker-display-over{
+    opacity: 1;
+    position: fixed;
+    top: 0vh;
+    left: 0;
+    overflow-y: scroll;
+    .toggle-button{
+      background-color: darken(#212121, 15);
+      .refine-button{
+        background-color: rgba(0,0,0,0);
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+}

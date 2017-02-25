@@ -1,0 +1,61 @@
+<script>
+  $(document).ready(function(){
+    $('.switch').on('click', function(e) {
+      $('.picker-wave-display-wrapper').toggleClass("picker-display-below picker-display-over"); //you can list several class names
+      if ($('.switch').find("span").text() == "Blend" ){
+        $('.switch').find("span").text("Plants");
+      }
+      else{
+        $('.switch').find("span").text("Blend")
+      }
+      e.preventDefault();
+    });
+
+    $('.orb').on('click', function(e) {
+      $(this).toggleClass('selected');
+      e.preventDefault();
+    });
+  });
+</script>
+
+<div class="picker-wave-display-wrapper picker-display-below large-9 small-12 columns">
+  <div class="wave-wrapper">
+    <div class="wave"></div>
+    <div class="wave2"></div>
+    <div class="wave3"></div>
+  </div>
+  <div class="toggle-button">
+    <a class="switch round-button refine-button"><span>Blend</span> <i class="fa fa-flask" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="picker-display">
+    <div class="small-12">
+      <h1>Your Blend</h1>
+
+      <div class="small-12 columns">
+        <img src="images/svgs/vector_spearmint.svg" alt="">
+        <h2>Spearmint</h2>
+        <!-- <p>Level: 100%</p> -->
+        <div id=".wave" class="slider"></div>
+      </div>
+
+      <div class="small-12 columns">
+        <img src="images/svgs/vector_ginger.svg" alt="">
+        <h2>Fresh Ginger</h2>
+        <!-- <p>Level: 100%</p> -->
+        <div id=".wave2" class="slider"></div>
+      </div>
+
+      <div class="small-12 columns">
+        <img src="images/svgs/vector_lavender.svg" alt="">
+        <h2>Lavender</h2>
+        <!-- <p>Level: 100%</p> -->
+        <div id=".wave3" class="slider"></div>
+      </div>
+
+      <a href="#" class="light-button">Make It <i class="fa fa-flask" aria-hidden="true"></i></a>
+
+    </div>
+  </div>
+
+</div>

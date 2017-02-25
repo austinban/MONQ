@@ -1,29 +1,44 @@
-.orb-wrapper{
-  text-align: center;
-  cursor: pointer;
-  padding: 10px !important;
-  .inner-orb{
-    border: 1px solid $mid-blue;
-    border-radius: 12px;
-    padding: 10px 10px 5px 10px;
-    background-color: white;
-    transition: all .3s;
-    &:hover{
-      background-color: $mid-blue;
-      color: white;
+.orbs{
+  padding: 10px;
+  display: inline-block;;
+  .orb-wrapper{
+    text-align: center;
+    cursor: pointer;
+    padding: 5px !important;
+    .inner-orb{
+      // border: 1px solid $mid-blue;
+      border-radius: 3px;
+      padding: 0px;
+      transition: all .3s;
+      h4{
+        @media only screen and (min-width: 1080px) {
+          opacity: 0;
+        }
+        transition: all .2s;
+        color: $mid-blue;
+      }
+      &:hover{
+        // background-color: $mid-blue;
+        // color: white;
+        h4{
+          opacity: 1;
+        }
+        .orb{
+          border: 2px solid $mid-blue;
+          @include animation('tottle .4s');
+        	animation-iteration-count: once;
+        	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+        }
+      }
       .orb{
-        border: 2px solid white;
-        @include animation('tottle .4s');
-      	animation-iteration-count: once;
-      	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+        width: 5.5rem;
+        height: 5.5rem;
+        display: inline-block;
+        border-radius: 400px;
       }
     }
-    .orb{
-      width: 4rem;
-      height: 4rem;
-      display: inline-block;
-      border-radius: 400px;
-    }
   }
-
+}
+.selected{
+  border: 2px solid $mid-blue;
 }

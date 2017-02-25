@@ -1,5 +1,16 @@
-.full-wrap{
-  height: 100%;
+body{
+  height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  @media only screen and (min-width: 1080px) {
+    overflow-y: hidden;
+  }
+}
+.full-wrap{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  @media only screen and (min-width: 1080px) {
+    overflow-y: hidden;
+  }
 }

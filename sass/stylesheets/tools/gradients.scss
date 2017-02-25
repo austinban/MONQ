@@ -7,11 +7,11 @@
 }
 
 @mixin gradient-radial($top, $bottom) {
-    background: $top; /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(at 85% 15%, $top, $bottom); /* For Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(at 85% 15%, $top, $bottom); /* For Opera 11.1 to 12.0 */
-    background: -moz-radial-gradient(at 85% 15%, $top, $bottom); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(at 85% 15%, $top, $bottom); /* Standard syntax */
+    background: $top !important; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(at 85% 15%, $top, $bottom) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(at 85% 15%, $top, $bottom) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(at 85% 15%, $top, $bottom) !important; /* For Firefox 3.6 to 15 */
+    background: radial-gradient(at 85% 15%, $top, $bottom) !important; /* Standard syntax */
 }
 
 @mixin gradient-cover($top, $mid, $bottom, $url) {

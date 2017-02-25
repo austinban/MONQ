@@ -1,25 +1,20 @@
 .display-orb{
-  display: inline-block;
-  border-radius: 400px;
-  transition: all .2s;
-  mix-blend-mode: screen;
-  margin-right: -8%;
-  @include animation('tottle 2.2s');
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
   &:nth-child(1){
-    @include gradient-radial(#f06292, #880e4f);
-    width: 12rem;
-    height: 12rem;
+    @include orb-mixin(#f06292, #880e4f, 20vw, 3.2s);
   }
   &:nth-child(2){
-    @include gradient-radial(#f0f4c3, #afb42b);
-    width: 18rem;
-    height: 18rem;
+    @include orb-mixin(#f0f4c3, #afb42b, 20vw, 4s);
   }
   &:nth-child(3){
-    @include gradient-radial(#bbdefb, #1976d2);
-    width: 15rem;
-    height: 15rem;
+    @include orb-mixin(#bbdefb, #1976d2, 20vw, 3.5s);
+  }
+  &:nth-child(4){
+    @include orb-mixin(#80cbc4, #26a69a, 20vw, 3.3s);
+  }
+  &:nth-child(5){
+    @include orb-mixin(#f0f4c3, #afb42b, 18vw, 4s);
+  }
+  &:nth-child(6){
+    @include orb-mixin(#bbdefb, #1976d2, 15vw , 3.5s);
   }
 }
