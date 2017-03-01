@@ -151,12 +151,16 @@ body{
     margin-bottom: 100px !important;
   }
   .toggle-button{
+    padding-bottom: 50px;
+    display: inline-block;
+    width: 100vw;
     text-align: center;
     background-color: rgba(0,0,0,0);
     height: 0;
     .refine-button{
       padding: 15px 60px;
       border-radius: 100px;
+      margin-bottom: 100px;
       background-color: rgba(255,255,255,.7);
       font-size: 1.25rem;
       &:hover{
@@ -170,7 +174,7 @@ body{
   }
   .picker-display-below{
     position: fixed;
-    top: calc(100vh - 96px);
+    bottom: 0;
     left: 0;
     .wave0, .wave1, .wave2{
       top: 200%;
