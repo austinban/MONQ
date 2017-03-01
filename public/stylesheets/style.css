@@ -7701,12 +7701,16 @@ body {
   background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
   /* Standard syntax */ }
 
+* {
+  -webkit-overflow-scrolling: touch; }
+
 .picker-wave-display-wrapper {
   transition: all .8s;
   height: 100vh;
   color: white;
   overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-transform: translate3d(0, 0, 0); }
   .picker-wave-display-wrapper .picker-display {
     text-align: center;
     min-height: 100vh;

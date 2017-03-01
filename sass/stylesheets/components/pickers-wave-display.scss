@@ -1,12 +1,16 @@
 body{
   @include gradient-radial(#880e4f, #ffcc80);
 }
+* {
+  -webkit-overflow-scrolling: touch;
+}
 .picker-wave-display-wrapper{
   transition: all .8s;
   height: 100vh;
   color: white;
   overflow-x: hidden;
   overflow-y: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
   .picker-display{
     text-align: center;
     min-height: 100vh;
