@@ -13,6 +13,9 @@
 
     $('.orb').on('click', function(e) {
       $(this).toggleClass('selected');
+      alert("selected");
+      $("#wave-wrapper").append('<div class="wave4"></div>');
+      console.log("appended");
       e.preventDefault();
     });
   });

@@ -5,23 +5,5 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="/javascripts/aos.js"></script>
 <link rel="icon" type="image/png" href="/images/favicon.png">
-
-<script>
-  $( function() {
-    $( ".slider" ).slider({
-      value: 100,
-      slide: handleSliderChange
-    });
-  });
-
-
-  function handleSliderChange(event, slider){
-    var capture = $(this).attr('id');
-    console.log(capture);
-    $(capture).css('opacity', slider.value / 100);
-    $(capture).find('p').text("Level: " + slider.value + '%');
-    $(this).parent().find('p').text("Level: " + slider.value + '%');
-  }
-</script>
+<script src="javascripts/sliders.js"></script>
