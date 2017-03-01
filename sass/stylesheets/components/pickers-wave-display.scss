@@ -3,7 +3,7 @@ body{
 }
 .picker-wave-display-wrapper{
   transition: all .8s;
-  min-height: 100vh;
+  height: 100vh;
   color: white;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -90,7 +90,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     @include gradient-radial(#880e4f, #ffcc80);
     .wave0, .wave1, .wave2{
       top: 50%;
