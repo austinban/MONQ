@@ -3,7 +3,7 @@ body{
 }
 .picker-wave-display-wrapper{
   transition: all .8s;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -32,6 +32,87 @@ body{
     }
   }
 }
+
+@media only screen and (min-width: 1080px) {
+  .toggle-button{
+    display: none;
+  }
+  .left{
+    text-align: left;
+  }
+  .right{
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .slider-wrapper{
+    padding-top: 100px;
+    margin-bottom: 100px !important;
+  }
+  .toggle-button{
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    padding-bottom: 50px;
+    .refine-button{
+      padding: 15px 60px;
+      background-color: rgba(255,255,255,.7);
+      font-size: 1.25rem;
+      &:hover{
+        background-color: rgba(255,255,255,1);
+        color: $mid-blue;
+        i{
+          color: $mid-blue;
+        }
+      }
+    }
+  }
+  .picker-display-below{
+    position: fixed;
+    top: calc(100vh - 112px) !important;
+    left: 0;
+    .wave0, .wave1, .wave2{
+      top: 200%;
+      left: 50%;
+    }
+    #sliders{
+      display: none;
+    }
+  }
+  .picker-display-over{
+    .slider-wrapper{
+      padding-top: 100px;
+      margin-bottom: 100px !important;
+    }
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    @include gradient-radial(#880e4f, #ffcc80);
+    .wave0, .wave1, .wave2{
+      top: 50%;
+      left: 50%;
+    }
+    .toggle-button{
+      background-color: rgba(0,0,0,0);
+      .refine-button{
+        background-color: rgba(0,0,0,0);
+        color: white;
+        border-color: white;
+        width: 100vw;
+        border-radius: 0;
+        i{
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
 
 .wave0{
   content: '';
@@ -96,124 +177,6 @@ body{
   animation: spin 26s infinite linear;
 }
 
-// .wave2 {
-//   width: 105%;
-//   height: 95%;
-//   margin-top: -125vw;
-//   margin-left: -125vw;
-//   transform-origin: 49% 51%;
-//   background-image:
-//     linear-gradient(
-//       rgba(255,180,150,0.5),
-//       rgba(180,200,255,0.5)
-//     );
-//   border-radius: 40% 38%;
-//   animation: spin 18s infinite linear;
-// }
-//
-// .wave3 {
-//   width: 102%;
-//   height: 98%;
-//   margin-top: -125vw;
-//   margin-left: -125vw;
-//   transform-origin: 51% 49%;
-//   background-image:
-//     linear-gradient(
-      // rgba(100,240,150,0.5),
-      // rgba(80,200,255,0.5)
-//     );
-//   border-radius: 48% 42%;
-//   animation: spin 22s infinite linear;
-// }
-
 @keyframes spin {
   100% { transform: rotate(360deg); }
-}
-
-
-
-
-@media only screen and (min-width: 1080px) {
-  .toggle-button{
-    display: none;
-  }
-  .left{
-    text-align: left;
-  }
-  .right{
-    text-align: right;
-  }
-}
-
-@media only screen and (max-width: 1080px) {
-  .slider-wrapper{
-    padding-top: 100px;
-    margin-bottom: 100px !important;
-  }
-  .toggle-button{
-    padding-bottom: 50px;
-    display: inline-block;
-    width: 100vw;
-    text-align: center;
-    background-color: rgba(0,0,0,0);
-    height: 0;
-    .refine-button{
-      padding: 15px 60px;
-      border-radius: 100px;
-      margin-bottom: 100px;
-      background-color: rgba(255,255,255,.7);
-      font-size: 1.25rem;
-      &:hover{
-        background-color: rgba(255,255,255,1);
-        color: $mid-blue;
-        i{
-          color: $mid-blue;
-        }
-      }
-    }
-  }
-  .picker-display-below{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    .wave0, .wave1, .wave2{
-      top: 200%;
-      left: 50%;
-    }
-    #sliders{
-      display: none;
-    }
-  }
-  .picker-display-over{
-    .slider-wrapper{
-      padding-top: 100px;
-      margin-bottom: 100px !important;
-    }
-    opacity: 1;
-    position: fixed;
-    top: 0vh;
-    left: 0;
-    overflow-y: scroll;
-    @include gradient-radial(#880e4f, #ffcc80);
-    .wave0, .wave1, .wave2{
-      top: 50%;
-      left: 50%;
-    }
-    .toggle-button{
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(0,0,0,0);
-      .refine-button{
-        background-color: rgba(0,0,0,0);
-        color: white;
-        border-color: white;
-        width: 100vw;
-        border-radius: 0;
-        i{
-          color: white;
-        }
-      }
-    }
-  }
 }
