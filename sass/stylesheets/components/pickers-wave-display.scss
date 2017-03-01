@@ -11,6 +11,7 @@ body{
     text-align: center;
     min-height: 100vh;
     display: flex;
+    -webkit-overflow-scrolling: touch;
     @media only screen and (min-width: 1080px) {
       justify-content: center;
       align-items: center;

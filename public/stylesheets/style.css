@@ -7710,7 +7710,8 @@ body {
   .picker-wave-display-wrapper .picker-display {
     text-align: center;
     min-height: 100vh;
-    display: flex; }
+    display: flex;
+    -webkit-overflow-scrolling: touch; }
     @media only screen and (min-width: 1080px) {
       .picker-wave-display-wrapper .picker-display {
         justify-content: center;
@@ -7770,6 +7771,7 @@ body {
     top: 0;
     left: 0;
     overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
     background: #880e4f !important;
     /* For browsers that do not support gradients */
     background: -webkit-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
@@ -7852,6 +7854,7 @@ body {
   @media only screen and (min-width: 1080px) {
     .picker-nav {
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       height: 100vh; } }
   .picker-nav h1 {
     padding: 0 0 10px 10px;
