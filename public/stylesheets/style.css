@@ -7450,12 +7450,7 @@ body {
   .light-button:hover {
     transition: all .2s;
     background: white;
-    color: #880e4f;
-    -webkit-animation: tottle .4s;
-    -moz-animation: tottle .4s;
-    -ms-animation: tottle .4s;
-    -o-animation: tottle .4s;
-    animation: tottle .4s; }
+    color: #880e4f; }
     .light-button:hover i {
       color: #880e4f; }
 
@@ -7802,18 +7797,13 @@ body {
       background-color: rgba(255, 255, 255, 0.7);
       font-size: 1.25rem; }
       .toggle-button .refine-button:hover {
-        -webkit-animation: tottle .4s;
-        -moz-animation: tottle .4s;
-        -ms-animation: tottle .4s;
-        -o-animation: tottle .4s;
-        animation: tottle .4s;
         background-color: white;
         color: #2980B9; }
         .toggle-button .refine-button:hover i {
           color: #2980B9; }
   .picker-display-below {
     position: fixed;
-    top: calc(100vh - 72px);
+    top: calc(100vh - 96px);
     left: 0; }
     .picker-display-below .wave0, .picker-display-below .wave1, .picker-display-below .wave2 {
       top: 200%;
@@ -7836,8 +7826,8 @@ body {
     /* For Firefox 3.6 to 15 */
     background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
     /* Standard syntax */ }
-    .picker-display-over #sliders {
-      margin-top: 200px; }
+    .picker-display-over .slider-wrapper {
+      margin-top: 100px; }
     .picker-display-over .wave0, .picker-display-over .wave1, .picker-display-over .wave2 {
       top: 50%;
       left: 50%; }

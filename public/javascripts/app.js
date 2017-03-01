@@ -1,133 +1,48 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
-
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
-
-particlesJS('particles-js',
-
-  {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#eeab12"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 1,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 20,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 10,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": false,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 3,
-        "direction": "top",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
+$(document).ready(function(){
+  $('.switch').on('click', function(e) {
+    $('.picker-wave-display-wrapper').toggleClass("picker-display-below picker-display-over"); //you can list several class names
+    if ($('.switch').find("span").text() == "Blend" ){
+      $('.switch').find("span").text("Plants");
     }
-  }
+    else{
+      $('.switch').find("span").text("Blend")
+    }
+    e.preventDefault();
+  });
 
-);
+  var counter = 0;
+
+  $('.inner-orb').on('click', function(e) {
+    $(this).find('.orb').toggleClass('selected');
+
+    var bg = $(this).find('.orb').css('background-image');
+    bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "").split("/");
+    imgURL = bg[3] + "/" + bg[4] + "/" + bg[5];
+
+    var nm = $(this).find('h4').text();
+    counter = (counter + 1) % 3;
+
+    $("#sliders").find('p').remove();
+    $("#wave-wrapper").append('<div class="wave' + counter + '"></div>');
+    $("#sliders").append(
+          '<div class="small-12 columns">'
+        +   '<div class="small-12 large-6 columns right">'
+        +     '<img src="' + imgURL + '" alt="">'
+        +     '<h2>' + nm + '</h2>'
+        +   '</div>'
+        +   '<div class="small-12 large-6 columns left">'
+        +     '<div id=".wave' + counter + '" class="slider"></div>'
+        +   '</div>'
+        + '</div>'
+    );
+    $(".slider").slider();
+
+    function reload_js(src) {
+        $('script[src="' + src + '"]').remove();
+        $('<script>').attr('src', src).appendTo('head');
+    }
+    reload_js('javascripts/sliders.js');
+
+    e.preventDefault();
+  });
+});

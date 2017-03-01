@@ -39,7 +39,6 @@
     transition: all .2s;
     background: white;
     color: #880e4f;
-    @include animation('tottle .4s');
     i{
       color: #880e4f;
     }

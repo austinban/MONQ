@@ -154,7 +154,6 @@ body{
       background-color: rgba(255,255,255,.7);
       font-size: 1.25rem;
       &:hover{
-        @include animation('tottle .4s');
         background-color: rgba(255,255,255,1);
         color: $mid-blue;
         i{
@@ -165,7 +164,7 @@ body{
   }
   .picker-display-below{
     position: fixed;
-    top: calc(100vh - 72px);
+    top: calc(100vh - 96px);
     left: 0;
     .wave0, .wave1, .wave2{
       top: 200%;
@@ -176,8 +175,8 @@ body{
     }
   }
   .picker-display-over{
-    #sliders{
-      margin-top: 200px;
+    .slider-wrapper{
+      margin-top: 100px;
     }
     opacity: 1;
     position: fixed;
