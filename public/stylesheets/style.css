@@ -7709,10 +7709,12 @@ body {
   overflow-y: hidden; }
   .picker-wave-display-wrapper .picker-display {
     text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    min-height: 100vh;
+    display: flex; }
+    @media only screen and (min-width: 1080px) {
+      .picker-wave-display-wrapper .picker-display {
+        justify-content: center;
+        align-items: center; } }
     .picker-wave-display-wrapper .picker-display img {
       display: inline-block;
       height: 2rem;
@@ -7787,6 +7789,9 @@ body {
     text-align: right; } }
 
 @media only screen and (max-width: 1080px) {
+  .slider-wrapper {
+    padding-top: 100px;
+    margin-bottom: 100px !important; }
   .toggle-button {
     text-align: center;
     background-color: transparent;
@@ -7827,7 +7832,8 @@ body {
     background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
     /* Standard syntax */ }
     .picker-display-over .slider-wrapper {
-      margin-top: 100px; }
+      padding-top: 100px;
+      margin-bottom: 100px !important; }
     .picker-display-over .wave0, .picker-display-over .wave1, .picker-display-over .wave2 {
       top: 50%;
       left: 50%; }

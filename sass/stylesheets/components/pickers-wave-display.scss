@@ -9,10 +9,12 @@ body{
   overflow-y: hidden;
   .picker-display{
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @media only screen and (min-width: 1080px) {
+      justify-content: center;
+      align-items: center;
+    }
     img{
       display: inline-block;
       height: 2rem;
@@ -144,6 +146,10 @@ body{
 }
 
 @media only screen and (max-width: 1080px) {
+  .slider-wrapper{
+    padding-top: 100px;
+    margin-bottom: 100px !important;
+  }
   .toggle-button{
     text-align: center;
     background-color: rgba(0,0,0,0);
@@ -176,7 +182,8 @@ body{
   }
   .picker-display-over{
     .slider-wrapper{
-      margin-top: 100px;
+      padding-top: 100px;
+      margin-bottom: 100px !important;
     }
     opacity: 1;
     position: fixed;
