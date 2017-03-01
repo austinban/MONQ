@@ -7757,7 +7757,7 @@ body {
           color: #2980B9; }
   .picker-display-below {
     position: fixed;
-    top: calc(100vh - 112px) !important;
+    top: calc(100vh - 140px) !important;
     left: 0; }
     .picker-display-below .wave0, .picker-display-below .wave1, .picker-display-below .wave2 {
       top: 200%;
