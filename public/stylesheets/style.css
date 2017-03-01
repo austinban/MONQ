@@ -7852,6 +7852,10 @@ body {
   box-shadow: inset 0 0 10vw rgba(255, 255, 255, 0.5);
   animation: spin 26s infinite linear; }
 
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); } }
+
 .picker-nav {
   background-color: white;
   padding-bottom: 60px !important;
@@ -7874,12 +7878,14 @@ body {
 
 .orbs {
   padding: 10px;
-  display: inline-block; }
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0); }
   .orbs .orb-wrapper {
     text-align: center;
     cursor: pointer;
     padding: 5px !important; }
     .orbs .orb-wrapper .inner-orb {
+      border: 0px solid #2980B9;
       border-radius: 3px;
       padding: 0px;
       transition: all .3s; }
@@ -7889,6 +7895,10 @@ body {
         @media only screen and (min-width: 1080px) {
           .orbs .orb-wrapper .inner-orb h4 {
             opacity: 0; } }
+      .orbs .orb-wrapper .inner-orb:hover h4 {
+        opacity: 1; }
+      .orbs .orb-wrapper .inner-orb:hover .orb {
+        border: 2px solid #2980B9; }
       .orbs .orb-wrapper .inner-orb .orb {
         width: 5.5rem;
         height: 5.5rem;

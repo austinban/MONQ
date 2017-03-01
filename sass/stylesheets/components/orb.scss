@@ -1,12 +1,13 @@
 .orbs{
   padding: 10px;
-  display: inline-block;;
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
   .orb-wrapper{
     text-align: center;
     cursor: pointer;
     padding: 5px !important;
     .inner-orb{
-      // border: 1px solid $mid-blue;
+      border: 0px solid $mid-blue;
       border-radius: 3px;
       padding: 0px;
       transition: all .3s;
@@ -17,19 +18,16 @@
         transition: all .2s;
         color: $mid-blue;
       }
-      // &:hover{
-      //   // background-color: $mid-blue;
-      //   // color: white;
-      //   h4{
-      //     opacity: 1;
-      //   }
-      //   .orb{
-      //     border: 2px solid $mid-blue;
-      //     @include animation('tottle .4s');
-      //   	animation-iteration-count: once;
-      //   	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
-      //   }
-      // }
+      &:hover{
+        // background-color: $mid-blue;
+        // color: white;
+        h4{
+          opacity: 1;
+        }
+        .orb{
+          border: 2px solid $mid-blue;
+        }
+      }
       .orb{
         width: 5.5rem;
         height: 5.5rem;
