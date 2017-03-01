@@ -17,19 +17,19 @@
         transition: all .2s;
         color: $mid-blue;
       }
-      &:hover{
-        // background-color: $mid-blue;
-        // color: white;
-        h4{
-          opacity: 1;
-        }
-        .orb{
-          border: 2px solid $mid-blue;
-          @include animation('tottle .4s');
-        	animation-iteration-count: once;
-        	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
-        }
-      }
+      // &:hover{
+      //   // background-color: $mid-blue;
+      //   // color: white;
+      //   h4{
+      //     opacity: 1;
+      //   }
+      //   .orb{
+      //     border: 2px solid $mid-blue;
+      //     @include animation('tottle .4s');
+      //   	animation-iteration-count: once;
+      //   	animation-timing-function: cubic-bezier(.34,.01,.18,1.35);
+      //   }
+      // }
       .orb{
         width: 5.5rem;
         height: 5.5rem;

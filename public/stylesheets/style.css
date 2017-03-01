@@ -7881,17 +7881,6 @@ body {
         @media only screen and (min-width: 1080px) {
           .orbs .orb-wrapper .inner-orb h4 {
             opacity: 0; } }
-      .orbs .orb-wrapper .inner-orb:hover h4 {
-        opacity: 1; }
-      .orbs .orb-wrapper .inner-orb:hover .orb {
-        border: 2px solid #2980B9;
-        -webkit-animation: tottle .4s;
-        -moz-animation: tottle .4s;
-        -ms-animation: tottle .4s;
-        -o-animation: tottle .4s;
-        animation: tottle .4s;
-        animation-iteration-count: once;
-        animation-timing-function: cubic-bezier(0.34, 0.01, 0.18, 1.35); }
       .orbs .orb-wrapper .inner-orb .orb {
         width: 5.5rem;
         height: 5.5rem;
