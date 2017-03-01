@@ -91,6 +91,7 @@ body{
     top: 0;
     left: 0;
     overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
     @include gradient-radial(#880e4f, #ffcc80);
     .wave0, .wave1, .wave2{
       top: 50%;
