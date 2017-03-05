@@ -9,9 +9,10 @@
   height: 1.25rem !important;
   width: 1.25rem !important;
   top: -.55rem !important;
-  @include gradient-radial(#880e4f, #ffcc80);
+  // @include gradient-radial(#880e4f, #ffcc80);
+  @include gradient-radial(#c8cfd6, #535f6b);
   border: 2px solid white !important;
-  opacity: .8;
+  mix-blend-mode: darken;
 }
 .ui-slider{
   border-radius: 100px !important;
@@ -19,9 +20,9 @@
   width: 200px;
   display: inline-block;
   margin-top: 16px;
-  opacity: .8 !important;
   height: 8px !important;
 }
 .slider{
-  @include gradient-radial(#880e4f, #ffcc80);
+  // @include gradient-radial(#880e4f, #ffcc80);
+  @include gradient-radial(#c8cfd6, #535f6b);
 }

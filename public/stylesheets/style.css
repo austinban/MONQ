@@ -7690,15 +7690,15 @@ button:focus {
         border-radius: 0; } }
 
 body {
-  background: #880e4f !important;
+  background: #c8cfd6 !important;
   /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -webkit-radial-gradient(at 85% 15%, #c8cfd6, #697582) !important;
   /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -o-radial-gradient(at 85% 15%, #c8cfd6, #697582) !important;
   /* For Opera 11.1 to 12.0 */
-  background: -moz-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -moz-radial-gradient(at 85% 15%, #c8cfd6, #697582) !important;
   /* For Firefox 3.6 to 15 */
-  background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: radial-gradient(at 85% 15%, #c8cfd6, #697582) !important;
   /* Standard syntax */ }
 
 * {
@@ -7721,6 +7721,8 @@ body {
       .picker-wave-display-wrapper .picker-display {
         justify-content: center;
         align-items: center; } }
+    .picker-wave-display-wrapper .picker-display slider-wrapper {
+      overflow-y: scroll; }
     .picker-wave-display-wrapper .picker-display img {
       display: inline-block;
       height: 2rem;
@@ -7733,6 +7735,15 @@ body {
       display: inline-block;
       padding-right: 20px;
       padding-left: 5px; }
+    .picker-wave-display-wrapper .picker-display .slide-close {
+      line-height: 1.75rem;
+      font-size: 1.5rem;
+      padding: 0 8px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: all .2s; }
+      .picker-wave-display-wrapper .picker-display .slide-close:hover {
+        color: white;
+        font-size: 1.75rem; }
 
 @media only screen and (min-width: 1080px) {
   .toggle-button {
@@ -7777,15 +7788,15 @@ body {
     left: 0;
     overflow-y: scroll !important;
     -webkit-overflow-scrolling: touch;
-    background: #880e4f !important;
+    background: #c8cfd6 !important;
     /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+    background: -webkit-radial-gradient(at 85% 15%, #c8cfd6, #8493a3) !important;
     /* For Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+    background: -o-radial-gradient(at 85% 15%, #c8cfd6, #8493a3) !important;
     /* For Opera 11.1 to 12.0 */
-    background: -moz-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+    background: -moz-radial-gradient(at 85% 15%, #c8cfd6, #8493a3) !important;
     /* For Firefox 3.6 to 15 */
-    background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+    background: radial-gradient(at 85% 15%, #c8cfd6, #8493a3) !important;
     /* Standard syntax */ }
     .picker-display-over .slider-wrapper {
       padding-top: 100px;
@@ -7804,7 +7815,24 @@ body {
         .picker-display-over .toggle-button .refine-button i {
           color: white; } }
 
-.wave0 {
+.wave1 {
+  content: '';
+  position: fixed;
+  z-index: -500000;
+  top: 50%;
+  left: 50%;
+  width: 240vw;
+  height: 258vw;
+  margin-left: -125vw;
+  transform-origin: 51% 49%;
+  transition: all .5s;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw white;
+  animation: spin 18s infinite linear;
+  pointer-events: none;
+  opacity: .7; }
+
+.wave {
   content: '';
   position: fixed;
   z-index: -500000;
@@ -7818,23 +7846,8 @@ body {
   background-image: linear-gradient(rgba(230, 238, 156, 0.5), rgba(118, 255, 3, 0.5));
   border-radius: 38% 42%;
   box-shadow: inset 0 0 10vw rgba(255, 255, 255, 0.5);
-  animation: spin 21s infinite linear; }
-
-.wave1 {
-  content: '';
-  position: fixed;
-  z-index: -500000;
-  top: 50%;
-  left: 50%;
-  width: 240vw;
-  height: 258vw;
-  margin-left: -125vw;
-  transform-origin: 51% 49%;
-  transition: all .5s;
-  background-image: linear-gradient(rgba(239, 108, 0, 0.5), rgba(255, 224, 178, 0.5));
-  border-radius: 48% 42%;
-  box-shadow: inset 0 0 10vw rgba(255, 255, 255, 0.5);
-  animation: spin 18s infinite linear; }
+  animation: spin 21s infinite linear;
+  pointer-events: none; }
 
 .wave2 {
   content: '';
@@ -7850,7 +7863,8 @@ body {
   background-image: linear-gradient(rgba(209, 196, 233, 0.5), rgba(94, 53, 177, 0.5));
   border-radius: 40% 38%;
   box-shadow: inset 0 0 10vw rgba(255, 255, 255, 0.5);
-  animation: spin 26s infinite linear; }
+  animation: spin 26s infinite linear;
+  pointer-events: none; }
 
 @keyframes spin {
   100% {
@@ -7903,7 +7917,8 @@ body {
         width: 5.5rem;
         height: 5.5rem;
         display: inline-block;
-        border-radius: 400px; }
+        border-radius: 400px;
+        background-size: cover; }
 
 .selected {
   border: 2px solid #2980B9; }
@@ -8118,18 +8133,18 @@ input[type=text] {
   height: 1.25rem !important;
   width: 1.25rem !important;
   top: -.55rem !important;
-  background: #880e4f !important;
+  background: #c8cfd6 !important;
   /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -webkit-radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -o-radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* For Opera 11.1 to 12.0 */
-  background: -moz-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -moz-radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* For Firefox 3.6 to 15 */
-  background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* Standard syntax */
   border: 2px solid white !important;
-  opacity: .8; }
+  mix-blend-mode: darken; }
 
 .ui-slider {
   border-radius: 100px !important;
@@ -8137,17 +8152,16 @@ input[type=text] {
   width: 200px;
   display: inline-block;
   margin-top: 16px;
-  opacity: .8 !important;
   height: 8px !important; }
 
 .slider {
-  background: #880e4f !important;
+  background: #c8cfd6 !important;
   /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -webkit-radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -o-radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* For Opera 11.1 to 12.0 */
-  background: -moz-radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: -moz-radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* For Firefox 3.6 to 15 */
-  background: radial-gradient(at 85% 15%, #880e4f, #ffcc80) !important;
+  background: radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* Standard syntax */ }
