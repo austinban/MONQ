@@ -42,7 +42,7 @@ $(document).ready(function(){
     var wave2 = Math.ceil(Math.random() * waveColors.length) - 1;
 
       // Set the random color
-    $('.picker-wave-display-wrapper').css({
+    $('.wave1').css({
       background: "-webkit-gradient(linear, left top, right top, from("+waveColors[wave1]+"), to("+waveColors[wave2]+"))"}).css({
        background: "-moz-linear-gradient(left, "+waveColors[wave1]+" 0%, "+waveColors[wave2]+" 100%)"});
 
