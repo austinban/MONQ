@@ -12,12 +12,12 @@
   // @include gradient-radial(#880e4f, #ffcc80);
   @include gradient-radial(#c8cfd6, #535f6b);
   border: 2px solid white !important;
-  mix-blend-mode: darken;
+  // mix-blend-mode: darken;
 }
 .ui-slider{
   border-radius: 100px !important;
   border: 2px solid white !important;
-  width: 200px;
+  width: 225px;
   display: inline-block;
   margin-top: 16px;
   height: 8px !important;

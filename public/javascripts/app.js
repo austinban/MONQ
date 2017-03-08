@@ -1,8 +1,3 @@
-var waveColors = new Array(
-  "#880e4f",
-  "#ffcc80"
-);
-
 $(document).ready(function(){
   $('.switch').on('click', function(e) {
     $('.picker-wave-display-wrapper').toggleClass("picker-display-below picker-display-over"); //you can list several class names
@@ -17,20 +12,39 @@ $(document).ready(function(){
 
   var counter = 0;
 
+  var waveColors = [
+  ];
+
   // The whole interaction for adding ingredients
   $('.inner-orb').on('click', function(e) {
     // $(this).find('.orb').toggleClass('selected');
 
-    var waves = "";
+    // This is the random creation of new colors and set a random pair of colors as the background
 
-    for (var i = 0, len = waveColors.length; i < len; i++) {
-      waves += waveColors[i] + ",";
+
+      // Random color creation
+    // var random = Math.ceil(Math.random() * 254);
+    var newWave = '#' + $(this).attr('id');
+    if (waveColors.includes(newWave) == false){
+      waveColors.push(newWave);
     }
-    waves = "linear-gradient("+waves+")";
+    else{
+      var i = waveColors.indexOf(newWave);
+      if(i != -1) {
+      	waveColors.splice(i, 1);
+      }
+    }
+    console.log(waveColors);
 
-    $('#wave1').css({
-      background: "-webkit-gradient(linear, left top, right top, from("+waveColors[0]+"), to("+waveColors[1]+"))"}).css({
-       background: "-moz-linear-gradient(left, "+waveColors[0]+" 0%, "+waveColors[1]+" 100%)"});
+      // Random array pick
+
+    var wave1 = Math.ceil(Math.random() * waveColors.length) - 1;
+    var wave2 = Math.ceil(Math.random() * waveColors.length) - 1;
+
+      // Set the random color
+    $('.picker-wave-display-wrapper').css({
+      background: "-webkit-gradient(linear, left top, right top, from("+waveColors[wave1]+"), to("+waveColors[wave2]+"))"}).css({
+       background: "-moz-linear-gradient(left, "+waveColors[wave1]+" 0%, "+waveColors[wave2]+" 100%)"});
 
     // Find the bg image url
     var bg = $(this).find('.orb').css('background-image');
@@ -46,13 +60,15 @@ $(document).ready(function(){
     if (!($("#sliders").find("#" + nmTrim).length)){
       $("#sliders").append(
             '<div class="small-12 columns slider-block" id="' + nmTrim + '">'
-          +   '<div class="small-12 large-6 columns right">'
-          +     '<a href="#" class="slide-close"><i class="fa fa-times" aria-hidden="true"></i></a>'
-          +     '<img src="' + imgURL + '" alt="">'
-          +     '<h2>' + nm + '</h2>'
-          +   '</div>'
-          +   '<div class="small-12 large-6 columns left">'
-          +     '<div id=".wave' + counter + '" class="slider"></div>'
+          +   '<div class="center-wrap">'
+          +     '<div class="small-12 large-6 columns right">'
+          +       '<a href="#" class="slide-close"><i class="fa fa-times" aria-hidden="true"></i></a>'
+          +       '<img src="' + imgURL + '" alt="">'
+          +       '<h2>' + nm + '</h2>'
+          +    '</div>'
+          +    '<div class="small-12 large-6 columns left">'
+          +      '<div id=".wave' + counter + '" class="slider"></div>'
+          +    '</div>'
           +   '</div>'
           + '</div>'
       );

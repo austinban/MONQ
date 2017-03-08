@@ -23,7 +23,7 @@
   @include gradient-radial($color1, $color2);
   width: $size;
   height: $size;
-  @include animation('orb-tottle' $time);
+  // @include animation('orb-tottle' $time);
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(.5,.0,.5,1);
 }

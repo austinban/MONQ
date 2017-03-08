@@ -7490,7 +7490,6 @@ button:focus {
         padding: 0em;
         font-size: 1.5rem; } }
   .nav .menu a:hover {
-    -webkit-animation: tottle .2s;
     animation-iteration-count: once;
     animation-timing-function: cubic-bezier(0.34, 0.01, 0.18, 1.35); }
   .nav .menu div:last-child {
@@ -7654,11 +7653,6 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 1.25rem; }
   .refine-button:hover {
-    -webkit-animation: tottle .4s;
-    -moz-animation: tottle .4s;
-    -ms-animation: tottle .4s;
-    -o-animation: tottle .4s;
-    animation: tottle .4s;
     background-color: white;
     color: #2980B9; }
     .refine-button:hover i {
@@ -7709,9 +7703,10 @@ body {
   height: 100vh;
   color: white;
   overflow-x: hidden;
-  overflow-y: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transform: translateZ(0); }
+  .picker-wave-display-wrapper .slider-wrapper {
+    margin-bottom: 100px !important; }
   .picker-wave-display-wrapper .picker-display {
     text-align: center;
     min-height: 100vh;
@@ -7720,9 +7715,8 @@ body {
     @media only screen and (min-width: 1080px) {
       .picker-wave-display-wrapper .picker-display {
         justify-content: center;
-        align-items: center; } }
-    .picker-wave-display-wrapper .picker-display slider-wrapper {
-      overflow-y: scroll; }
+        align-items: center;
+        overflow-y: scroll; } }
     .picker-wave-display-wrapper .picker-display img {
       display: inline-block;
       height: 2rem;
@@ -7730,7 +7724,8 @@ body {
       margin-top: -10px; }
     .picker-wave-display-wrapper .picker-display h1 {
       display: block;
-      width: 100%; }
+      width: 100%;
+      padding-top: 100px; }
     .picker-wave-display-wrapper .picker-display h2 {
       display: inline-block;
       padding-right: 20px;
@@ -7749,13 +7744,17 @@ body {
   .toggle-button {
     display: none; }
   .left {
-    text-align: left; }
+    text-align: left;
+    width: 250px; }
   .right {
-    text-align: right; } }
+    width: 250px;
+    text-align: left; }
+  .center-wrap {
+    display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); } }
 
 @media only screen and (max-width: 1080px) {
   .slider-wrapper {
-    padding-top: 100px;
     margin-bottom: 100px !important; }
   .toggle-button {
     display: inline-block;
@@ -7798,9 +7797,6 @@ body {
     /* For Firefox 3.6 to 15 */
     background: radial-gradient(at 85% 15%, #c8cfd6, #8493a3) !important;
     /* Standard syntax */ }
-    .picker-display-over .slider-wrapper {
-      padding-top: 100px;
-      margin-bottom: 100px !important; }
     .picker-display-over .wave0, .picker-display-over .wave1, .picker-display-over .wave2 {
       top: 50%;
       left: 50%; }
@@ -7826,6 +7822,7 @@ body {
   margin-left: -125vw;
   transform-origin: 51% 49%;
   transition: all .5s;
+  background: linear-gradient(rgba(224, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
   border-radius: 48% 42%;
   box-shadow: inset 0 0 10vw white;
   animation: spin 18s infinite linear;
@@ -7942,11 +7939,6 @@ body {
   /* Standard syntax */
   width: 20vw;
   height: 20vw;
-  -webkit-animation: orb-tottle 3.2s;
-  -moz-animation: orb-tottle 3.2s;
-  -ms-animation: orb-tottle 3.2s;
-  -o-animation: orb-tottle 3.2s;
-  animation: orb-tottle 3.2s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
 
@@ -7969,11 +7961,6 @@ body {
   /* Standard syntax */
   width: 20vw;
   height: 20vw;
-  -webkit-animation: orb-tottle 4s;
-  -moz-animation: orb-tottle 4s;
-  -ms-animation: orb-tottle 4s;
-  -o-animation: orb-tottle 4s;
-  animation: orb-tottle 4s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
 
@@ -7996,11 +7983,6 @@ body {
   /* Standard syntax */
   width: 20vw;
   height: 20vw;
-  -webkit-animation: orb-tottle 3.5s;
-  -moz-animation: orb-tottle 3.5s;
-  -ms-animation: orb-tottle 3.5s;
-  -o-animation: orb-tottle 3.5s;
-  animation: orb-tottle 3.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
 
@@ -8023,11 +8005,6 @@ body {
   /* Standard syntax */
   width: 20vw;
   height: 20vw;
-  -webkit-animation: orb-tottle 3.3s;
-  -moz-animation: orb-tottle 3.3s;
-  -ms-animation: orb-tottle 3.3s;
-  -o-animation: orb-tottle 3.3s;
-  animation: orb-tottle 3.3s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
 
@@ -8050,11 +8027,6 @@ body {
   /* Standard syntax */
   width: 18vw;
   height: 18vw;
-  -webkit-animation: orb-tottle 4s;
-  -moz-animation: orb-tottle 4s;
-  -ms-animation: orb-tottle 4s;
-  -o-animation: orb-tottle 4s;
-  animation: orb-tottle 4s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
 
@@ -8077,11 +8049,6 @@ body {
   /* Standard syntax */
   width: 15vw;
   height: 15vw;
-  -webkit-animation: orb-tottle 3.5s;
-  -moz-animation: orb-tottle 3.5s;
-  -ms-animation: orb-tottle 3.5s;
-  -o-animation: orb-tottle 3.5s;
-  animation: orb-tottle 3.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); }
 
@@ -8143,13 +8110,12 @@ input[type=text] {
   /* For Firefox 3.6 to 15 */
   background: radial-gradient(at 85% 15%, #c8cfd6, #535f6b) !important;
   /* Standard syntax */
-  border: 2px solid white !important;
-  mix-blend-mode: darken; }
+  border: 2px solid white !important; }
 
 .ui-slider {
   border-radius: 100px !important;
   border: 2px solid white !important;
-  width: 200px;
+  width: 225px;
   display: inline-block;
   margin-top: 16px;
   height: 8px !important; }
