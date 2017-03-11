@@ -12,8 +12,15 @@ function handleSliderChange(event, slider){
 }
 
 $('.slide-close').on('click', function(e) {
+  var removeHex = $(this).attr("id");
+  $(removeHex).find('.orb').removeClass('selected');
+  var i = waveColors.indexOf(removeHex);
+  if(i != -1) {
+    waveColors.splice(i, 1);
+  }
+
   $(this).parents( ".slider-block" ).fadeOut('fast', function(){
-    $(this).remove(); 
+    $(this).remove();
   });
   e.preventDefault();
 });

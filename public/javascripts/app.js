@@ -1,3 +1,6 @@
+var waveColors = [
+];
+
 $(document).ready(function(){
   $('.switch').on('click', function(e) {
     $('.picker-wave-display-wrapper').toggleClass("picker-display-below picker-display-over"); //you can list several class names
@@ -10,20 +13,21 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  var counter = 0;
-
-  var waveColors = [
-  ];
+  setInterval(function(){
+    if (waveColors.length > 0){
+      var wave1 = Math.ceil(Math.random() * waveColors.length) - 1;
+      $('.wave1').css({background: waveColors[wave1]});
+    }
+    else{
+      $('.wave1').css({background: "rgba(224,255,255,0.2)"});
+    }
+    console.log(waveColors.length)
+  }, 1000);
 
   // The whole interaction for adding ingredients
   $('.inner-orb').on('click', function(e) {
-    // $(this).find('.orb').toggleClass('selected');
+    $(this).find('.orb').toggleClass('selected');
 
-    // This is the random creation of new colors and set a random pair of colors as the background
-
-
-      // Random color creation
-    // var random = Math.ceil(Math.random() * 254);
     var newWave = '#' + $(this).attr('id');
     if (waveColors.includes(newWave) == false){
       waveColors.push(newWave);
@@ -34,17 +38,12 @@ $(document).ready(function(){
       	waveColors.splice(i, 1);
       }
     }
-    console.log(waveColors);
 
-      // Random array pick
-
-    var wave1 = Math.ceil(Math.random() * waveColors.length) - 1;
-    var wave2 = Math.ceil(Math.random() * waveColors.length) - 1;
-
-      // Set the random color
-    $('.wave1').css({
-      background: "-webkit-gradient(linear, left top, right top, from("+waveColors[wave1]+"), to("+waveColors[wave2]+"))"}).css({
-       background: "-moz-linear-gradient(left, "+waveColors[wave1]+" 0%, "+waveColors[wave2]+" 100%)"});
+    // Set the random color
+    // $('.wave1').css({
+    //   background: "-webkit-gradient(linear, left top, right top, from("+waveColors[wave1]+"), to("+waveColors[wave2]+"))"}).css({
+    //    background: "-moz-linear-gradient(left, "+waveColors[wave1]+" 0%, "+waveColors[wave2]+" 100%)"});
+    $('.wave1').css({background: waveColors[waveColors.length -1]});
 
     // Find the bg image url
     var bg = $(this).find('.orb').css('background-image');
@@ -62,12 +61,12 @@ $(document).ready(function(){
             '<div class="small-12 columns slider-block" id="' + nmTrim + '">'
           +   '<div class="center-wrap">'
           +     '<div class="small-12 large-6 columns right">'
-          +       '<a href="#" class="slide-close"><i class="fa fa-times" aria-hidden="true"></i></a>'
+          +       '<a href="#" id="'+ newWave +'"class="slide-close"><i class="fa fa-times" aria-hidden="true"></i></a>'
           +       '<img src="' + imgURL + '" alt="">'
           +       '<h2>' + nm + '</h2>'
           +    '</div>'
           +    '<div class="small-12 large-6 columns left">'
-          +      '<div id=".wave' + counter + '" class="slider"></div>'
+          +      '<div class="slider"></div>'
           +    '</div>'
           +   '</div>'
           + '</div>'
